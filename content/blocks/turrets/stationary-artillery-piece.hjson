@@ -1,0 +1,66 @@
+//basic info
+type: "ItemTurret"
+name: "Stationary Artillery Piece"
+description: "Specialized artillery. Requires pyratite or blast compound. No standard ammo."
+
+//stats
+health: 350
+buildCostMultiplier: 2
+size: 2
+range: 350
+minRange: 40
+targetAir: false
+targetGround: true
+reloadTime: 120
+shootCone: 360
+rotateSpeed: 2
+
+//visual
+shootShake: 4
+shootEffect: "artilleryExplosion"
+smokeEffect: "shellSmoke"
+heatColor: "ff8844"
+shootSound: "artillery"
+
+//projectile
+/*shootType:{
+    type: "ArtilleryBulletType"
+    damage: 50
+    splashDamage: 50
+    splashDamageRadius: 35
+    status: "none"
+    knockback: 0
+    pierce: false
+    homingPower: 0
+    lifetime: 60
+    speed: 3
+    hitEffect: "blastExplosion"
+}*/
+ammo:{
+    pyratite:{
+        damage: 30
+        splashDamage: 30
+        splashDamageRadius: 40
+        status: "burning"
+        statusDuration: 300
+        reloadMultiplier: 1.0
+        ammoMultiplier: 1
+    }
+
+    "blast-compound": {
+        damage: 60
+        splashDamage: 60
+        splashDamageRadius: 50  // Huge explosion
+        status: "blasted"       // Blasted status (stun + damage)
+        statusDuration: 60
+        reloadMultiplier: 1.0   // 1.2 = takes 20% longer to reload (slower firing)
+        ammoMultiplier: 1       // Each blast compound gives 1 shot
+    }
+}
+
+//build requirements
+requirements: [
+    "copper/300"
+    "silicon/70"
+    "graphite/50"
+]
