@@ -2,6 +2,7 @@
 type: "ItemTurret"
 name: "Stationary Artillery Piece"
 description: "Specialized artillery. Requires pyratite or blast compound. No standard ammo."
+sprite: "stationary-artillery-piece"
 
 //stats
 health: 350
