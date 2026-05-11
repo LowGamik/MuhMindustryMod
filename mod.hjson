@@ -1,0 +1,8 @@
+name: "muh-mindustry-mod"
+displayName: "Muh Mindustry Mod"
+author: LowGamik
+description: "This shit is ass"
+version: "1.0"
+minGameVersion: "157.4"
+dependencies: [ ]
+hidden: false
